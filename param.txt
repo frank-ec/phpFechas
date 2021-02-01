@@ -14,3 +14,19 @@ git remote add origin https://github.com/frank-ec/phpFechas.git
 git branch -M main
 git push -u origin main
 
+
+Marca de tiempo 
+01/01/1970 marca unix
+rango 31/12/1901 hasta el 19/01/2038
+
+Configuracion de zona horaria
+
+America/Guayaquil
+date_default_timezone_set('America/Guayaquil');
+
+php.ini
+/etc/php/7.2/apache2/php.ini
+date.timezone =America/Guayaquil
+
+
+
