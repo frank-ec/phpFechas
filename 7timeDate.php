@@ -55,18 +55,6 @@ print "<hr>";
 print "Hoy es ".$diaSemana." del mes ".$mes." a ".$diaMes." del año ".$anio."
  y son las ".$hora." y ".$min." minutos.";
 
-
-
-
-
-
-
-
-
-
-
-
-
 ?>    
 
 </body>
