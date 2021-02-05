@@ -27,16 +27,27 @@
                 });    
 </script>
 
+<style>
+::placeholder {
+  color: blue;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: blue;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: red;
+}
+</style>
+
 </head>
 <body>
 <h1>Validar una fecha con CheckDate</h1>
 <form method="post">
-
-<p>
-<input type="text" class="datepicker" name="fecha_ia" required="">             
-</p>
     <p>
-    
+  
         <label for="mes">Mes: </label>
         <select name="mes" id="mes">
             <?php
@@ -55,7 +66,7 @@
             ?>
         </select>
         <label for="anio">Año: </label>
-        <input type="text" name="anio" id="anio" list="lista">
+        <input type="text" name="anio" id="anio" list="lista"  placeholder="A red placeholder text.." required>
         <datalist id="lista">
             <?php
             $anio = date('Y');
@@ -76,12 +87,14 @@ if (isset($_POST["valida"])) {
     $mes = isset($_POST["mes"])?$_POST["mes"]:"0";
     $dia = isset($_POST["dia"])?$_POST["dia"]:"0";
     $anio = isset($_POST["anio"])?$_POST["anio"]:"0";
+    
     print "La fecha que enviaste es ";
     if (checkdate($mes, $dia, $anio)) {
         print "correcta";
     } else {
         print "incorrecta";
     }
+
 }
 ?>
 </body>
