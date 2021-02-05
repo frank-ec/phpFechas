@@ -7,7 +7,6 @@
         @import url('css/bootstrap.css');
 		@import url('css/bootstrap-datepicker.css'); */
         @import url('css/fontello.css');
-		   
     </style>
 
 <script src="js/jquery-3.1.1.min.js"></script>
@@ -53,7 +52,6 @@ if (isset($_POST["valida"])) {
     $month = date("m", $fechaComoEntero);
     $day = date("d", $fechaComoEntero);
 
-
     $fechaActual = "Fecha Actual: ".date('Y-m-d');
     $anioActual = "Anio Actual: ".date('Y');
     $mesActual = "Mes Actual: ".date('m');
@@ -74,13 +72,11 @@ if (isset($_POST["valida"])) {
         print ' <div class="alert alert-danger" role="alert">
                 Error la fecha ingresada no puede ser menor a la fecha actual
                     </div>';
-        
     }else {
         print ' <div class="alert alert-success" role="alert">
         La fecha es correcta.. 
             </div>';
     }
-
 }
 ?>
 </body>
