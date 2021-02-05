@@ -48,15 +48,38 @@ if (isset($_POST["valida"])) {
     /*  Asumimos que $fechaComoEntero es
         como su nombre lo dice una variable entera, que
         calculamos con los ejemplos mostrados arriba
-        */
+    */
     $year = date("Y", $fechaComoEntero);
     $month = date("m", $fechaComoEntero);
     $day = date("d", $fechaComoEntero);
 
-    print $fechaComoEntero."<br>";
-    print $year."<br>";
-    print $month."<br>";
-    print $day."<br>";
+
+    $fechaActual = "Fecha Actual: ".date('Y-m-d');
+    $anioActual = "Anio Actual: ".date('Y');
+    $mesActual = "Mes Actual: ".date('m');
+    $diaActual = "Dia Actual: ".date('d');
+    print $fechaActual."<br>";
+    print $anioActual."<br>";
+    print $mesActual."<br>";
+    print $diaActual."<br>";
+
+    print "<hr>";
+    print "Fecha Ingresada:".$fechaComoEntero."<br>";
+    print "Año ingresado:".$year."<br>";
+    print "Mes ingresado:".$month."<br>";
+    print "Dia ingresado:".$day."<br>";
+    print "<hr>";
+
+    if ($fecha<date('Y-m-d')) {
+        print ' <div class="alert alert-danger" role="alert">
+                Error la fecha ingresada no puede ser menor a la fecha actual
+                    </div>';
+        
+    }else {
+        print ' <div class="alert alert-success" role="alert">
+        La fecha es correcta.. 
+            </div>';
+    }
 
 }
 ?>
