@@ -2,11 +2,11 @@
 if (isset($_POST["fecha"])) {
 	$f = $_POST["fecha"];
 	list($a,$m,$d) = explode("-",$f);
-	if (checkdate($m, $d, $a)) {
-		$edad = (date("md")<$m.$d?date("Y")-$a-1:date("Y")-$a);
-		print "<p>Tienes ".$edad." años</p>";
+	if (checkdate($m,$d,$a)) {
+		$edad = (date("md")<$m.$d?date("Y")-$a-1:date("Y")-$a);	
+		print "<p>Tienes :".$edad."años</p>";
 	} else {
-		print "<p>Fecha en formato erróneo</p>";
+		print "<p>Fecha erronea</p>";
 	}
 	
 }
