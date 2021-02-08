@@ -1,6 +1,6 @@
 <?php
 session_start();
-$_tiempo = 10 * 60;  //10 segundos  * 60
+$_tiempo = 10;  //10 segundos  * 60
 if(!isset($_SESSION["sesion"])) {
     header("location:login.php");
     exit;
